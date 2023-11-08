@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Core_Automacao" Version="1.0.136" />
+    <PackageReference Include="coverlet.collector" Version="3.1.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Capabilities//CapabilitiesAndroid.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+   <ItemGroup>
+    <None Update="Capabilities//CapabilitiesIOS.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Conexao//DadosConexao.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <!-- <ItemGroup>
+    <Reference Include="Core_Automacao">
+      <HintPath>/Users/rocamco/vscode/Core_Automacao/bin/Debug/net6.0/Core_Automacao.dll</HintPath>
+    </Reference>
+  </ItemGroup> -->
+
+</Project>

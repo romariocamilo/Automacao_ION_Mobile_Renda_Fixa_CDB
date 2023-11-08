@@ -1,0 +1,12 @@
+{
+  "appium:platformName": "Android",
+  "appium:platformVersion": "13.0.0",
+  "appium:deviceName": "RX8T204BDHL",
+  "appium:appPackage": "com.itau.investimentos",
+  "appium:appActivity": "com.itau.investimentos.launcher.LauncherActivity",
+  "appium:automationName": "uiautomator2",
+  "appium:autoGrantPermissions": true,
+  "appium:noReset": false,
+  "appium:implicitWait": 20,
+  "appium:fastReset": true
+}

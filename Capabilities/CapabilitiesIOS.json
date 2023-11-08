@@ -1,0 +1,14 @@
+{
+  "appium:platformName": "iOS",
+  "appium:platformVersion": "16.4",
+  "appium:deviceName": "iPhone 14",
+  "appium:automationName": "XCUITest",
+  "appium:bundleId": "com.itau.investimentos.debug",
+  "appium:noReset": false,
+  "appium:autoDismissAlerts": true,
+  "appium:newCommandTimeout": 180000,
+  "appium:implicitWait": 60,
+  "appium:pageLoadTimoutSeconds": 180, 
+  "appium:udid": "A0FC2813-C8A2-42D6-81CC-1DE9EA6D5201",
+  "appium:launchTimeout": 180000
+}
