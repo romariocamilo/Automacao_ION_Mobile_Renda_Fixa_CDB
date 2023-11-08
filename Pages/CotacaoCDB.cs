@@ -9,7 +9,6 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Pages
         public ElementoMobile BotaoVoltar { get; set; }
         public ElementoMobile TextoTituloCDBDiItau { get; set; }
         public ElementoMobile TextoPaginacao { get; set; }
-        public ElementoMobile Paginacao { get; set; }
         public ElementoMobile TextoDisponivelParaAplicacao { get; set; }
         public ElementoMobile TextoAplicar { get; set; }
         public ElementoMobile TextoValorRS000 { get; set; }
@@ -21,11 +20,8 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Pages
         public ElementoMobile BotaoQuatroReaisInsercaoRapida { get; set; }
         public ElementoMobile TrilhoBotoesInsercaoRapida { get; set; }
         public ElementoMobile TextoMensagemValorMinimo { get; set; }
-        public ElementoMobile TextoMensagemValorMinimoIOS { get; set; }
         public ElementoMobile TextoMensagemValorMultiplo { get; set; }
-        public ElementoMobile TextoMensagemValorMultiploIOS { get; set; }
         public ElementoMobile TextoMensagemValorMaximo { get; set; }
-        public ElementoMobile TextoMensagemValorMaximoIOS { get; set; }
         public ElementoMobile TextoMensagemSemSaldo { get; set; }
         public ElementoMobile BotaoContinuar { get; set; }
 

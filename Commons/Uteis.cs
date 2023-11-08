@@ -78,8 +78,7 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Commons
             try
             {
                 appiumServiceNew.ScrollCarroselParaDireitaPorIdParandoComTexto(_vitrine.TrilhoCardProdutos, _vitrine.CardCdbRendaFixaAndroid, _vitrine.CardCdbRendaFixaAndroid.TextoEsperadoAndroid);
-                var listaPesquisaCardsCarrossel = appiumServiceNew.BuscaVariosElementoMobile(_vitrine.CardCdbRendaFixaAndroid);
-                appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(listaPesquisaCardsCarrossel, "CDB e Renda Fixa");
+                appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(_vitrine.CardCdbRendaFixaAndroid, "CDB e Renda Fixa");
             }
             catch
             {
@@ -87,16 +86,14 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Commons
                 fluxoLupa = true;
                 appiumServiceNew.ClicaNoElementoMobile(_vitrine.BotaoLupaPesquisa);
                 appiumServiceNew.EscreveNoElementoMobile(_lupa.CampoPesquisa, "CDB DI Itaú");
-                var listaPesquisa = appiumServiceNew.BuscaVariosElementoMobile(_lupa.OpcaoCDBDIItau);
-                appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(listaPesquisa, "CDB DI Itaú");
+                appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(_lupa.OpcaoCDBDIItau, "CDB DI Itaú");
                 appiumServiceNew.ClicaNoElementoMobile(_informacoesGeraisCDB.BotaoFecharDica);
                 appiumServiceNew.ClicaNoElementoMobile(_informacoesGeraisCDB.BotaoInvestir);
             }
 
             if (fluxoCarrosel && !fluxoLupa)
             {
-                var listaProdutosVitrine = appiumServiceNew.BuscaVariosElementoMobile(_vitrineCDBeRendaFixa.TextoTituloCDBDI);
-                appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(listaProdutosVitrine, _vitrineCDBeRendaFixa.TextoTituloCDBDI.TextoEsperadoAndroid);
+                appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(_vitrineCDBeRendaFixa.TextoTituloCDBDI, _vitrineCDBeRendaFixa.TextoTituloCDBDI.TextoEsperadoAndroid);
                 appiumServiceNew.ClicaNoElementoMobile(_informacoesGeraisCDB.BotaoFecharDica);
                 appiumServiceNew.ClicaNoElementoMobile(_informacoesGeraisCDB.BotaoInvestir);
             }

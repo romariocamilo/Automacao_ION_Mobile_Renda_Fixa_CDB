@@ -6,33 +6,13 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Helpers.Android.Contratacao.TelaCo
 {
     public class CotacaoCdbHelper
     {
-        private readonly StorieExterno _storieExterno;
-        private readonly SelecaoAmbiente _selecaoAmbiente;
-        private readonly BemVindo _bemVindo;
-        private readonly Login _login;
-        private readonly Biometria _biometria;
-        private readonly StorieInterno _storieInterno;
-        private readonly Home _home;
-        private readonly Vitrine _vitrine;
-        private readonly VitrineCDBeRendaFixa _vitrineCDBeRendaFixa;
         public readonly InformacoesGeraisCDB informacoesGeraisCDB;
         public readonly CotacaoCDB cotacaoCDB;
-        //public readonly ConfirmacaoCDB confirmacaoCDB;
 
         public CotacaoCdbHelper()
         {
-            _storieExterno = new StorieExterno();
-            _selecaoAmbiente = new SelecaoAmbiente();
-            _bemVindo = new BemVindo();
-            _login = new Login();
-            _biometria = new Biometria();
-            _storieInterno = new StorieInterno();
-            _home = new Home();
-            _vitrine = new Vitrine();
-            _vitrineCDBeRendaFixa = new VitrineCDBeRendaFixa();
             informacoesGeraisCDB = new InformacoesGeraisCDB();
             cotacaoCDB = new CotacaoCDB();
-            //confirmacaoCDB = new ConfirmacaoCDB();
         }
 
         public void SnapShotTelaCotacaoHelper(AppiumServiceNew appiumServiceNew)
@@ -45,19 +25,11 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Helpers.Android.Contratacao.TelaCo
             appiumServiceNew.BuscaElementoMobile(cotacaoCDB.TextoValorRS000);
             appiumServiceNew.BuscaElementoMobile(cotacaoCDB.TextoDataAplicacao);
             appiumServiceNew.BuscaElementoMobile(cotacaoCDB.TextoNaoAlteraDataAplicacao);
-            var listaElementos = appiumServiceNew.BuscaVariosElementoMobile(cotacaoCDB.BotaoUmRealInsercaoRapida);
-            cotacaoCDB.BotaoUmRealInsercaoRapida = appiumServiceNew.BuscaElementoMobileDaListaPeloTextoDesejado(listaElementos, cotacaoCDB.BotaoUmRealInsercaoRapida.TextoEsperadoAndroid);
-
-            listaElementos = appiumServiceNew.BuscaVariosElementoMobile(cotacaoCDB.BotaoDoisReaisInsercaoRapida);
-            cotacaoCDB.BotaoDoisReaisInsercaoRapida = appiumServiceNew.BuscaElementoMobileDaListaPeloTextoDesejado(listaElementos, cotacaoCDB.BotaoDoisReaisInsercaoRapida.TextoEsperadoAndroid);
-
-            listaElementos = appiumServiceNew.BuscaVariosElementoMobile(cotacaoCDB.BotaoTresReaisInsercaoRapida);
-            cotacaoCDB.BotaoTresReaisInsercaoRapida = appiumServiceNew.BuscaElementoMobileDaListaPeloTextoDesejado(listaElementos, cotacaoCDB.BotaoTresReaisInsercaoRapida.TextoEsperadoAndroid);
-
+            appiumServiceNew.BuscaElementoMobileDaListaPeloTextoDesejado(cotacaoCDB.BotaoUmRealInsercaoRapida, cotacaoCDB.BotaoUmRealInsercaoRapida.TextoEsperadoAndroid);
+            appiumServiceNew.BuscaElementoMobileDaListaPeloTextoDesejado(cotacaoCDB.BotaoDoisReaisInsercaoRapida, cotacaoCDB.BotaoDoisReaisInsercaoRapida.TextoEsperadoAndroid);
+            appiumServiceNew.BuscaElementoMobileDaListaPeloTextoDesejado(cotacaoCDB.BotaoTresReaisInsercaoRapida, cotacaoCDB.BotaoTresReaisInsercaoRapida.TextoEsperadoAndroid);
             appiumServiceNew.ScrollCarroselParaDireitaPorIdParandoComTexto(cotacaoCDB.TrilhoBotoesInsercaoRapida, cotacaoCDB.BotaoQuatroReaisInsercaoRapida, cotacaoCDB.BotaoQuatroReaisInsercaoRapida.TextoEsperadoAndroid);
-
-            listaElementos = appiumServiceNew.BuscaVariosElementoMobile(cotacaoCDB.BotaoQuatroReaisInsercaoRapida);
-            cotacaoCDB.BotaoQuatroReaisInsercaoRapida = appiumServiceNew.BuscaElementoMobileDaListaPeloTextoDesejado(listaElementos, cotacaoCDB.BotaoQuatroReaisInsercaoRapida.TextoEsperadoAndroid);
+            appiumServiceNew.BuscaElementoMobileDaListaPeloTextoDesejado(cotacaoCDB.BotaoQuatroReaisInsercaoRapida, cotacaoCDB.BotaoQuatroReaisInsercaoRapida.TextoEsperadoAndroid);
         }
 
         public void VerificaBotaoVoltarTelaCotacaoHelper(AppiumServiceNew appiumServiceNew)
@@ -68,13 +40,11 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Helpers.Android.Contratacao.TelaCo
 
         public void VerificaBotoesInsercaoRapidaHelper(AppiumServiceNew appiumServiceNew)
         {
-            var listaElementos = appiumServiceNew.BuscaVariosElementoMobile(cotacaoCDB.BotaoUmRealInsercaoRapida);
-            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(listaElementos, cotacaoCDB.BotaoUmRealInsercaoRapida.TextoEsperadoAndroid);
-            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(listaElementos, cotacaoCDB.BotaoDoisReaisInsercaoRapida.TextoEsperadoAndroid);
-            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(listaElementos, cotacaoCDB.BotaoTresReaisInsercaoRapida.TextoEsperadoAndroid);
+            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(cotacaoCDB.BotaoUmRealInsercaoRapida, cotacaoCDB.BotaoUmRealInsercaoRapida.TextoEsperadoAndroid);
+            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(cotacaoCDB.BotaoDoisReaisInsercaoRapida, cotacaoCDB.BotaoDoisReaisInsercaoRapida.TextoEsperadoAndroid);
+            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(cotacaoCDB.BotaoTresReaisInsercaoRapida, cotacaoCDB.BotaoTresReaisInsercaoRapida.TextoEsperadoAndroid);
             appiumServiceNew.ScrollCarroselParaDireitaPorIdParandoComTexto(cotacaoCDB.TrilhoBotoesInsercaoRapida, cotacaoCDB.BotaoQuatroReaisInsercaoRapida, cotacaoCDB.BotaoQuatroReaisInsercaoRapida.TextoEsperadoAndroid);
-            listaElementos = appiumServiceNew.BuscaVariosElementoMobile(cotacaoCDB.BotaoQuatroReaisInsercaoRapida);
-            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(listaElementos, cotacaoCDB.BotaoQuatroReaisInsercaoRapida.TextoEsperadoAndroid);
+            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(cotacaoCDB.BotaoQuatroReaisInsercaoRapida, cotacaoCDB.BotaoQuatroReaisInsercaoRapida.TextoEsperadoAndroid);
 
             appiumServiceNew.BuscaElementoMobile(cotacaoCDB.TextoValorRS000);
         }
@@ -95,7 +65,6 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Helpers.Android.Contratacao.TelaCo
         {
             Uteis uteis = new Uteis();
             uteis.AcessoPadraoTelaCotacaoCDBAndroid(appiumServiceNew, Constants.AGENCIA, Constants.CONTA, Constants.SENHA);
-
             appiumServiceNew.EscreveTecladoNativo(cotacaoCDB.TextoValorRS000, "9000000000");
             appiumServiceNew.BuscaElementoMobile(cotacaoCDB.TextoMensagemValorMaximo);
         }
@@ -117,16 +86,13 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Helpers.Android.Contratacao.TelaCo
 
         public void VerificaBotaoContinuarHabilitadoHelper(AppiumServiceNew appiumServiceNew)
         {
-            var listaElementos = appiumServiceNew.BuscaVariosElementoMobile(cotacaoCDB.BotaoUmRealInsercaoRapida);
-            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(listaElementos, cotacaoCDB.BotaoUmRealInsercaoRapida.TextoEsperadoAndroid);
-            
+            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(cotacaoCDB.BotaoUmRealInsercaoRapida, cotacaoCDB.BotaoUmRealInsercaoRapida.TextoEsperadoAndroid);  
             appiumServiceNew.BuscaElementoMobile(cotacaoCDB.BotaoContinuar);
         }
 
         public void VerificaBotaoContinuarDesabilitadoHelper(AppiumServiceNew appiumServiceNew)
         {
-            var listaElementos = appiumServiceNew.BuscaVariosElementoMobile(cotacaoCDB.BotaoUmRealInsercaoRapida);
-            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(listaElementos, cotacaoCDB.BotaoUmRealInsercaoRapida.TextoEsperadoAndroid);
+            appiumServiceNew.ClicaNoElementoMobileDaListaPeloTextoDesejado(cotacaoCDB.BotaoUmRealInsercaoRapida, cotacaoCDB.BotaoUmRealInsercaoRapida.TextoEsperadoAndroid);
 
             //appiumServiceNew.VerificaSeElementoEstaNaTelaPorId(cotacaoCDB.BotaoContinuar);
             //appiumServiceNew.EscreveTecladoNativo(cotacaoCDB.TextoValorRS000, "1");

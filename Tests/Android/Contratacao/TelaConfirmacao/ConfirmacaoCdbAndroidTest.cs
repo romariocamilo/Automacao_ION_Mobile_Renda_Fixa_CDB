@@ -18,7 +18,7 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Tests.Android.Contratacao.TelaConf
             _uteis = new Uteis();
         }
 
-        [SetUp, Retry(3)]
+        [SetUp, Retry(1)]
         public void Setup()
         {
             _service = new AppiumServiceNew(PlataformaMobile.Android);
@@ -62,74 +62,71 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Tests.Android.Contratacao.TelaConf
             Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.Texto175Porcento.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.Texto175Porcento.TextoObtido);
             Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoAcima720Dias.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoAcima720Dias.TextoObtido);
             Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.Texto15Porcento.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.Texto15Porcento.TextoObtido);
-            // Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoResgate.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoResgate.TextoObtido);
-            // Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoValorResgate.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoValorResgate.TextoObtido);
-            // Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.CampoIdentificacaoComprovante.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.CampoIdentificacaoComprovante.TextoObtido);
-            // Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoResgate.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoResgate.TextoObtido);
-            // Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoIof.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoIof.TextoObtido);
-            // Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoComprovante.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoComprovante.TextoObtido);
-            // Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoFgc.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoFgc.TextoObtido);
-            // Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoLgpd.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoLgpd.TextoObtido);
-            // Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.BotaoPoliticaPrivacidade.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.BotaoPoliticaPrivacidade.TextoObtido);
-            // Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.BotaoConfirmar.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.BotaoConfirmar.TextoObtido);
+            //Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoResgate.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoResgate.TextoObtido);
+            //Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoValorResgate.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoValorResgate.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.CampoIdentificacaoComprovante.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.CampoIdentificacaoComprovante.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoResgate.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoResgate.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoIof.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoIof.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoComprovante.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoComprovante.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoFgc.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoFgc.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoLgpd.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.TextoInformativoLgpd.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.BotaoPoliticaPrivacidade.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.BotaoPoliticaPrivacidade.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.BotaoConfirmar.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.BotaoConfirmar.TextoObtido);
         }
 
-        // [Test, Retry(3), Order(2)]
-        // public void VerificaBotaoVoltarTelaConfimacaoTest()
-        // {
-        //     _confirmacaoCdbHelper.VerificaBotaoVoltarTelaConfimacaoHelper(_service);
+        [Test, Retry(1), Order(2)]
+        public void VerificaBotaoVoltarTelaConfimacaoTest()
+        {
+            _confirmacaoCdbHelper.VerificaBotaoVoltarTelaConfimacaoHelper(_service);
 
-        //     Assert.AreEqual(_confirmacaoCdbHelper.cotacaoCDB.PaginacaoAndroid.TextoEsperadoAndroid, _confirmacaoCdbHelper.cotacaoCDB.PaginacaoAndroid.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.cotacaoCDB.TextoDisponivelParaAplicacao.TextoEsperadoAndroid, _confirmacaoCdbHelper.cotacaoCDB.TextoDisponivelParaAplicacao.TextoObtido.Substring(0, 30));
-        //     Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.TextoValorMonetario.TextoObtido.Trim().Replace(" ", string.Empty), _confirmacaoCdbHelper.cotacaoCDB.TextoValorAplicacao.TextoObtido);
-        // }
+            Assert.AreEqual(_confirmacaoCdbHelper.cotacaoCDB.TextoPaginacao.TextoEsperadoAndroid, _confirmacaoCdbHelper.cotacaoCDB.TextoPaginacao.TextoObtido);
+        }
 
-        // [Test, Retry(3), Order(3)]
-        // public void VerificaCampoIdentificacaoComprovanteTest()
-        // {
-        //     string textoIdentificacao = "texto identificacao";
+        [Test, Retry(1), Order(3)]
+        public void VerificaCampoIdentificacaoComprovanteTest()
+        {
+            string textoIdentificacao = "texto identificacao";
 
-        //     _confirmacaoCdbHelper.VerificaCampoIdentificacaoComprovanteHelper(_service, textoIdentificacao);
+            _confirmacaoCdbHelper.VerificaCampoIdentificacaoComprovanteHelper(_service, textoIdentificacao);
 
-        //     Assert.AreEqual(textoIdentificacao, _confirmacaoCdbHelper.confirmacaoCDB.CampoIdentificacaoComprovante.TextoObtido);
-        // }
+            Assert.AreEqual(textoIdentificacao, _confirmacaoCdbHelper.confirmacaoCDB.CampoIdentificacaoComprovante.TextoObtido);
+        }
 
-        // [Test, Retry(3), Order(4)]
-        // public void VerificaBotaoPoliticaPrivacidadeTest()
-        // {
-        //     _confirmacaoCdbHelper.VerificaBotaoPoliticaPrivacidadeHelper(_service);
+        [Test, Retry(1), Order(4)]
+        public void VerificaBotaoPoliticaPrivacidadeTest()
+        {
+            _confirmacaoCdbHelper.VerificaBotaoPoliticaPrivacidadeHelper(_service);
 
-        //     Assert.IsNotNull(_confirmacaoCdbHelper.politicaPrivacidade.BotaoVoltar.ElementoAndroid);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoPoliticaPrivacidade.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoPoliticaPrivacidade.TextoObtido);
-        // }
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoPoliticaPrivacidade.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoPoliticaPrivacidade.TextoObtido);
+        }
 
-        // [Test, Retry(3), Order(5)]
-        // public void VerificaBotaoVoltarPoliticaPrivacidadeTest()
-        // {
-        //     _confirmacaoCdbHelper.VerificaBotaoVoltarPoliticaPrivacidadeHelper(_service);
+        [Test, Retry(1), Order(5)]
+        public void VerificaBotaoVoltarPoliticaPrivacidadeTest()
+        {
+            _confirmacaoCdbHelper.VerificaBotaoVoltarPoliticaPrivacidadeHelper(_service);
 
-        //     Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.BotaoPoliticaPrivacidade.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.BotaoPoliticaPrivacidade.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.BotaoConfirmar.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.BotaoConfirmar.TextoObtido);
-        // }
+            Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.BotaoPoliticaPrivacidade.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.BotaoPoliticaPrivacidade.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.confirmacaoCDB.BotaoConfirmar.TextoEsperadoAndroid, _confirmacaoCdbHelper.confirmacaoCDB.BotaoConfirmar.TextoObtido);
+        }
 
-        // [Test, Retry(3), Order(6)]
-        // public void VerificaConteudoPoliticaPrivacidadeTest()
-        // {
-        //     _confirmacaoCdbHelper.VerificaConteudoPoliticaPrivacidadeHelper(_service);
+        [Test, Retry(1), Order(6)]
+        public void VerificaConteudoPoliticaPrivacidadeTest()
+        {
+            _confirmacaoCdbHelper.VerificaConteudoPoliticaPrivacidadeHelper(_service);
 
-        //     Assert.IsNotNull(_confirmacaoCdbHelper.politicaPrivacidade.BotaoVoltar.ElementoAndroid);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoPoliticaPrivacidade.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoPoliticaPrivacidade.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoTratamentoDadosPessoais.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoTratamentoDadosPessoais.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoItau.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoItau.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoItemResumo.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoItemResumo.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.BotaoDadosColetados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.BotaoDadosColetados.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoDadosColetados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoDadosColetados.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.BotaoFinalidadeUsoDados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.BotaoFinalidadeUsoDados.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoFinalidadeUsoDados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoFinalidadeUsoDados.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.BotaoDadosBiometricos.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.BotaoDadosBiometricos.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoDadosBiometricos.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoDadosBiometricos.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.BotaoCompartilhamentoDados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.BotaoCompartilhamentoDados.TextoObtido);
-        //     Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoCompartilhamentoDados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoCompartilhamentoDados.TextoObtido);
-        // }
+            Assert.IsNotNull(_confirmacaoCdbHelper.politicaPrivacidade.BotaoVoltar.ElementoAndroid);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoPoliticaPrivacidade.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoPoliticaPrivacidade.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoTratamentoDadosPessoais.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoTratamentoDadosPessoais.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoItau.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoItau.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoItemResumo.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoItemResumo.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.BotaoDadosColetados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.BotaoDadosColetados.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoDadosColetados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoDadosColetados.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.BotaoFinalidadeUsoDados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.BotaoFinalidadeUsoDados.TextoObtido);
+            //Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoFinalidadeUsoDados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoFinalidadeUsoDados.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.BotaoDadosBiometricos.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.BotaoDadosBiometricos.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoDadosBiometricos.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoDadosBiometricos.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.BotaoCompartilhamentoDados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.BotaoCompartilhamentoDados.TextoObtido);
+            Assert.AreEqual(_confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoCompartilhamentoDados.TextoEsperadoAndroid, _confirmacaoCdbHelper.politicaPrivacidade.TextoInformativoCompartilhamentoDados.TextoObtido);
+        }
     }
 }

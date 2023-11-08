@@ -67,8 +67,8 @@ namespace Automacao_ION_Mobile_Renda_Fixa_CDB.Pages
             Texto20Porcento = new ElementoMobile(TipoIdentificador.Id, TipoIdentificador.NaoDefinido, "inner_value_text", string.Empty, "20.0%", string.Empty);
             Texto175Porcento = new ElementoMobile(TipoIdentificador.Id, TipoIdentificador.NaoDefinido, "inner_value_text", string.Empty, "17.5%", string.Empty);
             Texto15Porcento = new ElementoMobile(TipoIdentificador.Id, TipoIdentificador.NaoDefinido, "inner_value_text", string.Empty, "15.0%", string.Empty);
-            TextoResgate = new ElementoMobile(TipoIdentificador.Id, TipoIdentificador.NaoDefinido, "label_text", "Resgate diário, com crédito no mesmo dia.", "Resgate", "Resgate diário, com crédito no mesmo dia.");
-            TextoValorResgate = new ElementoMobile(TipoIdentificador.Id, TipoIdentificador.NaoDefinido, "value_text", string.Empty, "diário, com crédito no mesmo dia.", string.Empty);
+            //TextoResgate = new ElementoMobile(TipoIdentificador.Id, TipoIdentificador.NaoDefinido, "label_text", "Resgate diário, com crédito no mesmo dia.", "Resgate", "Resgate diário, com crédito no mesmo dia.");
+            //TextoValorResgate = new ElementoMobile(TipoIdentificador.Id, TipoIdentificador.NaoDefinido, "value_text", string.Empty, "diário, com crédito no mesmo dia.", string.Empty);
             CampoIdentificacaoComprovante = new ElementoMobile(TipoIdentificador.Id, TipoIdentificador.NaoDefinido, "identifyReceipt", "Identificação no comprovante", "Identificação no comprovante", "Identificação no comprovante");
             TextoInformativoResgate = new ElementoMobile(TipoIdentificador.Id, TipoIdentificador.NaoDefinido, "textInfo", string.Empty, "A qualquer momento o cliente poderá solicitar o resgate total ou parcial da aplicação.", string.Empty);
             TextoInformativoIof = new ElementoMobile(TipoIdentificador.Id, TipoIdentificador.NaoDefinido, "textInfo", string.Empty, "Há incidência de tabela regressiva de IOF para liquidações antes de 30 dias contados da data de aplicação.", string.Empty);
